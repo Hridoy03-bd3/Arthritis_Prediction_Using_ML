@@ -37,8 +37,8 @@ h1, h2, h3 {font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Robo
 @st.cache_resource
 def load_model_and_scaler():
     try:
-        model = joblib.load("model.pkl")
-        scaler = joblib.load("scaler.pkl")   # trained only on Age column
+        model = joblib.load("model (2).pkl")
+        scaler = joblib.load("scaler (1).pkl")   # trained only on Age column
         return model, scaler
     except:
         return None, None
@@ -247,3 +247,4 @@ if submitted:
     st.download_button("📄 Download PDF Report", data=pdf_data,
                        file_name=f"arthritis_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
                        mime="application/pdf")
+
